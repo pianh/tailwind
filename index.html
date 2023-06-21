@@ -7,10 +7,16 @@
     <title>TailwindCSS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
+    <!-- <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
+    /> -->
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,500&display=swap"
+      rel="stylesheet"
     />
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -23,97 +29,56 @@
     <link rel="stylesheet" href="./build/app.css" />
   </head>
   <!-- npx tailwindcss -i css/tailwind.css -o build/tailwind.css --watch -->
+  <!-- sm: tailwind-class -->
+  <!-- md: tailwind-class -->
+  <!-- lg: tailwind-class -->
+  <!-- sm: 640
+       md: 768
+       lg: 1024
+       xl: 1280 -->
+
+  <!-- hover:bg-red -->
+  <!-- lg:hover:bg-blue -> breakpoint:hover:class-->
+
   <body>
-    <label for="toggle" class="inline-block cursor-pointer toggle-switch">
-      <input
-        type="checkbox"
-        name=""
-        id="toggle"
-        class="darkmode-input hidden"
-      />
-      <div
-        class="
-          w-[100px]
-          h-[40px]
-          border border-[#ccc]
-          rounded-full
-          fixed
-          right-5
-          bottom-5
-          z-50
-          p-[5px]
-          transition-colors
-        "
+    <div class="m-12">
+      <h1
+        class="text-center text-orangefa sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4"
       >
-        <div
-          class="
-            w-7
-            h-7
-            bg-[#ccc]
-            rounded-full
-            transition-transform
-            darkmode-spinner
-          "
-        ></div>
-      </div>
-    </label>
-    <div class="mx-auto max-w-[1200px] grid grid-cols-4 gap-x-5 p-5">
+        Live anywhere
+      </h1>
+      <h2 class="text-center font-light text-[#07a787] mb-35">
+        Keep calm & travel on
+      </h2>
       <div
-        class="
-          px-5
-          py-8
-          rounded-lg
-          border border-[#eee]
-          text-center
-          bg-white
-          dark:bg-[#0F0D58]
-        "
+        class="grid grid-cols-1 lg:grid-cols-3 gap-x-4 max-w-6xl mx-auto px-[15] gap-y-7 lg:gap-y-0"
       >
-        <img
-          src="https://free3dicon.com/wp-content/uploads/2021/09/compass_perspective_matte_s-2-300x300.png.webp"
-          alt=""
-          class="mb-5 max-w-[100px] mx-auto"
-        />
-        <h3 class="text-lg font-semibold mb-6 text-[#0F0D58] dark:text-white">
-          Recommendation
-        </h3>
-        <div
-          class="
-            text-sm
-            leading-loose
-            text-[#9191B4]
-            font-normal
-            dark:text-white
-          "
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, odio,
-          facilis vero quod natus molestiae autem provident nam corporis sint
-          accusamus excepturi at in, temporibus architecto ad voluptatibus
-          maxime. Tenetur!
+        <div>
+          <div class="h-96">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1686685571893-bee9d691f9a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1526&q=80"
+              alt="image"
+              class="w-full h-full rounded-lg object-cover"
+            />
+          </div>
+          <div>
+            <h3 class="text-center font-medium text-xl">
+              Enjoy the great cold
+            </h3>
+            <span class="block text-center text-gray-400 text-sm"
+              >6.789 pro</span
+            >
+          </div>
         </div>
       </div>
     </div>
-    <script>
-      const toggleSwitch = document.querySelector(
-        '.toggle-switch input[type="checkbox"]'
-      );
-      const currentTheme = localStorage.getItem("theme");
-      if (currentTheme) {
-        document.documentElement.setAttribute("class", currentTheme);
-        if (currentTheme === "dark") {
-          toggleSwitch.checked = true;
-        }
-      }
-      function switchTheme(e) {
-        if (e.target.checked) {
-          document.documentElement.setAttribute("class", "dark");
-          localStorage.setItem("theme", "dark");
-        } else {
-          document.documentElement.setAttribute("class", "light");
-          localStorage.setItem("theme", "light");
-        }
-      }
-      toggleSwitch.addEventListener("change", switchTheme);
-    </script>
+
+    <div>
+      <button
+        class="inline-block py-3 px-10 m-5 text-white bg-[#6A5AF9] lg:hover:bg-red-400 rounded-lg transition-colors"
+      >
+        Confirm
+      </button>
+    </div>
   </body>
 </html>
