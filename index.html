@@ -39,7 +39,8 @@
 
   <!-- hover:bg-red -->
   <!-- lg:hover:bg-blue -> breakpoint:hover:class-->
-
+  <!-- parent: group
+  child: breakpoint: group-hover: bg-red -->
   <body>
     <div class="m-12">
       <h1
@@ -73,12 +74,26 @@
       </div>
     </div>
 
-    <div>
+    <div class="group p-10 border border-red-50">
       <button
-        class="inline-block py-3 px-10 m-5 text-white bg-[#6A5AF9] lg:hover:bg-red-400 rounded-lg transition-colors"
+        class="inline-block py-3 px-10 m-5 text-white bg-[#6A5AF9] lg:hover:bg-red-400 rounded-lg transition-colors
+        lg:group-hover:bg-red-400
+        motion-safe:hover:scale-110
+        disabled:opacity-50
+        "
+        disabled
       >
         Confirm
       </button>
+    </div>
+    <input type="text" class="py-3 px-8 border boder-[#ccc] outline-none rounded-xl m-6 lg:focus:border-[#ffa400] transition-all" />
+    <input type="checkbox"
+    class="appearance-none checked:bg-blue-400 checked:border-transparent w-5 h-5 border"/>
+    <ul>
+      <li class="odd:bg-red-500 ml-5">asss</li>
+    </ul>
+    <div before="" class="w-10 h-10 flex items-center justify-center text-[#00aefd] mx-auto my-5 border border-[#eee] rounded-xl relative before:content-[attr(before)] before:absolute before:inset-0 before:bg-red-400 before:opacity-25">
+      <ion-icon name="airplane-outline"></ion-icon>
     </div>
   </body>
 </html>
